@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" styleClass="home" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Rafa.GestorFinanciero.LoginController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="361.0" prefWidth="640.0" style="-fx-background-color: rgb(32, 32, 32);" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="401.0" fitWidth="640.0" layoutY="-1.0" style="-fx-opacity: 80%;">
+               <image>
+                  <Image url="@../Fotos/fondo-finanzas-770.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="269.0" layoutY="245.0" mnemonicParsing="false" onAction="#inicio" onMouseClicked="#inicio" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: rgb(47, 47, 47);" text="Iniciar sesión" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label alignment="CENTER" layoutX="193.0" layoutY="31.0" prefHeight="116.0" prefWidth="253.0" text="Inicia sesión">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <PasswordField alignment="CENTER" layoutX="244.0" layoutY="200.0" promptText="Contraseña" />
+            <TextField alignment="CENTER" layoutX="226.0" layoutY="147.0" prefHeight="26.0" prefWidth="186.0" promptText="Correo electrónico" />
+            <Button layoutX="240.0" layoutY="287.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: tr;" text="He olvidado mi contraseña" textFill="#0015ff" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="14.0" layoutY="360.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: tr;" text="Help" textFill="#0015ff" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="527.0" layoutY="360.0" mnemonicParsing="false" onAction="#volver" onMouseClicked="#volver" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: tr;" text="Volver" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="23.0" layoutX="527.0" layoutY="360.0" opacity="0.66" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Fotos/back-arrow_icon-icons.com_72866.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

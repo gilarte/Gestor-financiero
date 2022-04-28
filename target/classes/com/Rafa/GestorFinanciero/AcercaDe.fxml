@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgb(25, 25, 25);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Rafa.GestorFinanciero.AcercaDeController">
+   <children>
+      <Text fill="WHITE" layoutX="151.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30px;" text="Proyecto Final 1ºCFGS" wrappingWidth="298.93670654296875" />
+      <Text fill="WHITE" layoutX="67.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="Autor:" wrappingWidth="59.7366943359375" />
+      <Text fill="WHITE" layoutX="239.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30px;" text="Contacto" wrappingWidth="122.93670654296875" />
+      <Separator layoutX="-3.0" layoutY="141.0" prefHeight="2.0" prefWidth="608.0" />
+      <Text fill="#bfb5b5" layoutX="178.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="Rafael Ángel Gilarte Núñez" wrappingWidth="335.73663330078125" />
+      <Text fill="WHITE" layoutX="67.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="Correo:" wrappingWidth="72.53668212890625" />
+      <Text fill="#bfb5b5" layoutX="178.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="rafagilarte@gmail.com" wrappingWidth="335.73663330078125" />
+      <Text fill="WHITE" layoutX="67.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="github:" wrappingWidth="72.53668212890625" />
+      <Text fill="WHITE" layoutX="63.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="Linkedin:" wrappingWidth="80.53668212890625" />
+      <Text fill="#bfb5b5" layoutX="178.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="https://github.com/gilarte" wrappingWidth="335.73663330078125" />
+      <Text fill="#bfb5b5" layoutX="178.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="linkedin.com/in/rafaelagn" wrappingWidth="335.73663330078125" />
+      <Button layoutX="274.0" layoutY="346.0" mnemonicParsing="false" onAction="#volverApp" onMouseClicked="#volverApp" style="-fx-background-color: tr;" text="Cerrar" textFill="BLUE" underline="true" />
+   </children>
+</Pane>
