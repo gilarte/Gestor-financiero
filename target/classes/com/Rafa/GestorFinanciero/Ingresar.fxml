@@ -104,14 +104,6 @@
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
             <Label layoutX="191.0" layoutY="66.0" style="-fx-font-size: 25px;" text="???.??€" textFill="WHITE" />
-            <Button layoutX="6.0" layoutY="313.0" mnemonicParsing="false" style="-fx-background-color: tr;" text="Help" textFill="WHITE" underline="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></Button>
-            <Button layoutX="401.0" layoutY="313.0" mnemonicParsing="false" style="-fx-background-color: tr;" text="Acerca de" textFill="WHITE" underline="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></Button>
             <DatePicker layoutX="259.0" layoutY="158.0" prefHeight="25.0" prefWidth="109.0" />
             <TextField layoutX="259.0" layoutY="118.0" prefHeight="25.0" prefWidth="79.0" />
             <Text fill="WHITE" layoutX="66.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="Cantidad a ingresar:" wrappingWidth="162.93671417236328" />

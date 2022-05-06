@@ -100,11 +100,6 @@
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="164.0" layoutY="149.0" prefHeight="59.0" prefWidth="143.0" style="-fx-font-size: 40px;" text="???.??€" textFill="WHITE" />
-            <Button layoutX="415.0" layoutY="301.0" mnemonicParsing="false" style="-fx-background-color: tr;" text="Help" textFill="WHITE" underline="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
          </children></Pane>
    </center>
 </BorderPane>

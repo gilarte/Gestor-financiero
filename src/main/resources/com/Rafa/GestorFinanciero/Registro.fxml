@@ -20,7 +20,7 @@
                   <Image url="@../Fotos/fondo-finanzas-770.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="269.0" layoutY="326.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: rgb(47, 47, 47);" text="Crear cuenta" textFill="WHITE">
+            <Button layoutX="269.0" layoutY="326.0" mnemonicParsing="false" onAction="#creaCuenta" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: rgb(47, 47, 47);" text="Crear cuenta" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -30,15 +30,10 @@
                   <Font size="26.0" />
                </font>
             </Label>
-            <Button layoutX="12.0" layoutY="361.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: tr;" text="Help" textFill="#000ffa" underline="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <PasswordField alignment="CENTER" layoutX="227.0" layoutY="239.0" prefHeight="26.0" prefWidth="186.0" promptText="Contraseña" />
-            <TextField alignment="CENTER" layoutX="225.0" layoutY="187.0" prefHeight="26.0" prefWidth="186.0" promptText="Nombre de usuario" />
-            <TextField alignment="CENTER" layoutX="225.0" layoutY="134.0" prefHeight="26.0" prefWidth="186.0" promptText="Correo electrónico" />
-            <TextField alignment="CENTER" layoutX="227.0" layoutY="288.0" prefHeight="26.0" prefWidth="186.0" promptText="Saldo" />
+            <PasswordField fx:id="Contraseña" alignment="CENTER" layoutX="227.0" layoutY="239.0" prefHeight="26.0" prefWidth="186.0" promptText="Contraseña" />
+            <TextField fx:id="Nombre" alignment="CENTER" layoutX="225.0" layoutY="187.0" prefHeight="26.0" prefWidth="186.0" promptText="Nombre de usuario" />
+            <TextField fx:id="Correo" alignment="CENTER" layoutX="225.0" layoutY="134.0" prefHeight="26.0" prefWidth="186.0" promptText="Correo electrónico" />
+            <TextField fx:id="Saldo" alignment="CENTER" layoutX="227.0" layoutY="288.0" prefHeight="26.0" prefWidth="186.0" promptText="                      Saldo                    €" />
             <ImageView fitHeight="26.0" fitWidth="23.0" layoutX="537.0" layoutY="370.0" opacity="0.66" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Fotos/back-arrow_icon-icons.com_72866.png" />

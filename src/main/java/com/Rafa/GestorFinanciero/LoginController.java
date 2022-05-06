@@ -14,4 +14,10 @@ public class LoginController {
     private void inicio() throws IOException {
         App.setRoot("Inicio");
     }
+	@FXML
+    private void Login() throws IOException {
+        App.setRoot("OlvidaContraseña");
+    }
+	
+	
 }
