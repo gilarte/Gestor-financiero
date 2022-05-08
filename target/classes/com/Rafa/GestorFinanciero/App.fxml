@@ -40,32 +40,37 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" styleClass="home" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Rafa.GestorFinanciero.AppController">
-  <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="361.0" prefWidth="640.0" style="-fx-background-color: rgb(32, 32, 32);" VBox.vgrow="ALWAYS">
-      <children>
-            <ImageView fitHeight="401.0" fitWidth="640.0" layoutY="-1.0" style="-fx-opacity: 80%;">
-               <image>
-                  <Image url="@../Fotos/fondo-finanzas-770.jpg" />
-               </image>
-            </ImageView>
-            <Button layoutX="247.0" layoutY="213.0" mnemonicParsing="false" onAction="#login" onMouseClicked="#login" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: rgb(47, 47, 47);" text="Iniciar sesión" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button layoutX="267.0" layoutY="257.0" mnemonicParsing="false" onAction="#registro" onMouseClicked="#registro" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: rgb(47, 47, 47);" text="Regístrate" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button layoutX="535.0" layoutY="361.0" mnemonicParsing="false" onAction="#acercaDe" onMouseClicked="#acercaDe" style="-fx-background-color: tr;" text="Acerca de" textFill="#001aff" underline="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Text fill="#40a945" layoutX="186.0" layoutY="158.0" stroke="BLACK" strokeType="OUTSIDE" style="-fx-font-size: 26px;" text="GESTIÓN DE GASTOS" />
-      </children>
-    </AnchorPane>
-  </children>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Rafa.GestorFinanciero.AppController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="640.0" styleClass="home" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="402.0" prefWidth="645.0" style="-fx-background-color: rgb(32, 32, 32);" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="401.0" fitWidth="640.0" layoutY="-1.0" style="-fx-opacity: 80%;">
+                     <image>
+                        <Image url="@../Fotos/fondo-finanzas-770.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="247.0" layoutY="213.0" mnemonicParsing="false" onAction="#login" onMouseClicked="#login" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: rgb(47, 47, 47);" text="Iniciar sesión" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="267.0" layoutY="257.0" mnemonicParsing="false" onAction="#registro" onMouseClicked="#registro" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: rgb(47, 47, 47);" text="Regístrate" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="535.0" layoutY="361.0" mnemonicParsing="false" onAction="#acercaDe" onMouseClicked="#acercaDe" style="-fx-background-color: tr;" text="Acerca de" textFill="#001aff" underline="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Text fill="#40a945" layoutX="186.0" layoutY="158.0" stroke="BLACK" strokeType="OUTSIDE" style="-fx-font-size: 26px;" text="GESTIÓN DE GASTOS" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

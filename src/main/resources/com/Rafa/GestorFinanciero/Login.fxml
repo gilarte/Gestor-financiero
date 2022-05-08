@@ -20,7 +20,7 @@
                   <Image url="@../Fotos/fondo-finanzas-770.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="269.0" layoutY="245.0" mnemonicParsing="false" onAction="#inicio" onMouseClicked="#inicio" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: rgb(47, 47, 47);" text="Iniciar sesión" textFill="WHITE">
+            <Button layoutX="269.0" layoutY="245.0" mnemonicParsing="false" onAction="#validaContraseña" onMouseClicked="#inicio" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: rgb(47, 47, 47);" text="Iniciar sesión" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -30,8 +30,8 @@
                   <Font size="26.0" />
                </font>
             </Label>
-            <PasswordField alignment="CENTER" layoutX="244.0" layoutY="200.0" promptText="Contraseña" />
-            <TextField alignment="CENTER" layoutX="226.0" layoutY="147.0" prefHeight="26.0" prefWidth="186.0" promptText="Correo electrónico" />
+            <PasswordField fx:id="Contrasena" alignment="CENTER" layoutX="244.0" layoutY="200.0" promptText="Contraseña" />
+            <TextField fx:id="Correo" alignment="CENTER" layoutX="226.0" layoutY="147.0" prefHeight="26.0" prefWidth="186.0" promptText="Correo electrónico" />
             <Button layoutX="240.0" layoutY="287.0" mnemonicParsing="false" onAction="#Login" onMouseClicked="#Login" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: tr;" text="He olvidado mi contraseña" textFill="#0015ff" underline="true">
                <cursor>
                   <Cursor fx:constant="HAND" />

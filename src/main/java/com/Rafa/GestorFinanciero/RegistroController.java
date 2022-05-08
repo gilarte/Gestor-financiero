@@ -9,10 +9,8 @@ import com.Rafa.GestorFinanciero.modelDAO.UsuarioDao;
 import com.Rafa.GestorFinanciero.utils.Util;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
+
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
 public class RegistroController {
 
@@ -35,16 +33,23 @@ public class RegistroController {
 	 */
 	public void creaCuenta() {
 		try {
+			if(UsuarioDao.search(Correo.getText())) {
+				
+			}else
 			if (validaCorreo(Correo.getText()) && esDecimal(Saldo.getText()) && Contraseña.getText().matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")) {
 				Double d = Double.parseDouble(Saldo.getText());
 				Usuario aux = new Usuario(Correo.getText(), Nombre.getText(), Contraseña.getText(), d);
 				UsuarioDao.insert(aux);
-				alertAdd();
+				Util.alertAdd("INFORMACION", "USUARIO AÑADIDO", "El usuario se ha añadido correctamente");
 			} else {
-				errorAdd();
+				Util.errorAdd("INFORMACION", "USUARIO NO AÑADIDO", "Escribe un correo valido, el sueldo con un numero,\n por ejemplo, 500.25 o 500, y que la contraseña cumpla lo siguiente:\n"
+						+ "Al menos 8 caracteres\r\n"
+						+ "Contiene al menos un dígito\r\n"
+						+ "Contiene al menos un carácter alfa inferior y un carácter alfa superior\r\n"
+						+ "Contiene al menos un carácter dentro de un conjunto de\ncaracteres especiales (@#%$^ etc.)\r\n"
+						+ "No contiene espacio, tabulador, etc.\r\n");
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
 			Util.print("ERROR inesperado");
 		}
 	}
@@ -68,33 +73,12 @@ public class RegistroController {
 		return valid;
 	}
 
-	private void alertAdd() throws IOException {
-		Alert alert = new Alert(AlertType.INFORMATION);
-		alert.setTitle("INFORMACION");
-		alert.setHeaderText("USUARIO AÑADIDO");
-		alert.setContentText("El usuario se ha añadido correctamente");
-		alert.show();
-		Stage s = (Stage) alert.getDialogPane().getScene().getWindow();
-		s.toFront();
-	}
 
-	private void errorAdd() throws IOException {
-		Alert alert = new Alert(AlertType.ERROR);
-		alert.setTitle("INFORMACION");
-		alert.setHeaderText("USUARIO NO AÑADIDO");
-		alert.setContentText(
-						"Escribe un correo valido, el sueldo con un numero,\n por ejemplo, 500.25 o 500, y que la contraseña cumpla lo siguiente:\n"
-						+ "Al menos 8 caracteres\r\n"
-						+ "Contiene al menos un dígito\r\n"
-						+ "Contiene al menos un carácter alfa inferior y un carácter alfa superior\r\n"
-						+ "Contiene al menos un carácter dentro de un conjunto de\ncaracteres especiales (@#%$^ etc.)\r\n"
-						+ "No contiene espacio, tabulador, etc.\r\n");
-		alert.show();
-		Stage s = (Stage) alert.getDialogPane().getScene().getWindow();
-		s.toFront();
-	}
-
-	//Devuelve true si la cadena que llega es un numero decimal, false en caso contrario
+	/**
+	 * Método que comprueba que el dato introducido es un número double
+	 * @param cad: cadena que va a ser comprobada para saber si es un numero valido o no
+	 * @return true si la cadena es un numero entero o decimal, false si no
+	 */
 	public boolean esDecimal(String cad) {
 		try {
 			Double.parseDouble(cad);
