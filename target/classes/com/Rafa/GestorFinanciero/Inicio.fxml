@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Rafa.GestorFinanciero.MenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Rafa.GestorFinanciero.InicioController">
    <top>
       <Pane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #589db7;" BorderPane.alignment="CENTER">
          <children>
@@ -18,7 +18,7 @@
             <Separator layoutY="45.0" prefHeight="30.0" prefWidth="130.0" />
             <Label layoutX="333.0" layoutY="15.0" style="-fx-font-size: 20px;" text="lNICIO" />
             <Separator layoutX="127.0" layoutY="-70.0" orientation="VERTICAL" prefHeight="200.0" />
-            <Label layoutX="51.0" layoutY="30.0" text="Label" />
+            <Label fx:id="Nombre" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="23.0" prefHeight="24.0" prefWidth="108.0" />
          </children>
       </Pane>
    </top>
@@ -99,7 +99,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="164.0" layoutY="149.0" prefHeight="59.0" prefWidth="143.0" style="-fx-font-size: 40px;" text="???.??€" textFill="WHITE" />
+            <Label fx:id="saldo" alignment="CENTER" contentDisplay="CENTER" layoutX="164.0" layoutY="149.0" prefHeight="59.0" prefWidth="143.0" style="-fx-font-size: 40px;" text="???.??€" textFill="WHITE" />
          </children></Pane>
    </center>
 </BorderPane>

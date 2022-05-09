@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import com.Rafa.GestorFinanciero.model.Usuario;
 import com.Rafa.GestorFinanciero.modelDAO.UsuarioDao;
 import com.Rafa.GestorFinanciero.utils.Connect;
+import com.Rafa.GestorFinanciero.utils.DataService;
 import com.Rafa.GestorFinanciero.utils.Util;
 
 import javafx.fxml.FXML;
@@ -54,7 +55,8 @@ public class LoginController {
 		if(aux==null) {
 			Util.errorAdd("ALERTA", "USUARIO NO ENCONTRADO", "El correo introducido o la contraseña son incorrectos.");
 		}else {
-			Util.alertAdd("LOGIN CORRECTO", "¡BIENVENIDO!", "Has iniciado sesion como "+aux.getNombre());
+			DataService.user=aux;
+			Util.alertAdd("LOGIN CORRECTO", "¡BIENVENIDO!", "Has iniciado sesion como "+DataService.user.getNombre());
 			App.setRoot("Inicio");
 		}
 		

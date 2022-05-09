@@ -10,7 +10,10 @@ import java.util.List;
 
 import com.Rafa.GestorFinanciero.model.Usuario;
 import com.Rafa.GestorFinanciero.utils.Connect;
+import com.Rafa.GestorFinanciero.utils.DataService;
+import com.Rafa.GestorFinanciero.utils.Util;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
@@ -172,11 +175,30 @@ public class UsuarioDao {
 			aux=new Usuario();
 			aux.setCorreo(rs.getString(1));
 			if(aux.getCorreo()==correo) {
-				valid=true;;
+				valid=true;
 			}
 		} catch (Exception e) {
 			valid=false;
 		}
 		return valid;
 	}
+	
+	@FXML
+	public static boolean cambiarSaldo(String correo, Double newSaldo) {
+		boolean valid=false;
+		Connection myConnection = Connect.getConnect();
+		String query = "UPDATE usuario SET Dinero = '"+newSaldo+"' WHERE Correo = '"+correo+"'";
+		try {
+			PreparedStatement pt=myConnection.prepareStatement(query);
+			pt.executeUpdate();
+			DataService.user.setDinero(newSaldo);
+			valid=true;
+		} catch (SQLException e) {
+			// TODO: handle exception
+			Util.print("ERROR");
+		}
+		
+		return valid;
+	}
+	
 }

@@ -8,16 +8,17 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.Rafa.GestorFinanciero.interfaces.IMovimientoDao;
 import com.Rafa.GestorFinanciero.model.Movimientos;
 import com.Rafa.GestorFinanciero.utils.Connect;
 
-public class MovimientoDao {
+public class MovimientoDao implements IMovimientoDao{
 	/**
 	 * Inserta un nuevo movimiento en la tabla movimientos
 	 * @param m movimiento que va a ser insertado
 	 * @return devuelve true si lo ha insertado correctamente y false si no
 	 */
-	public boolean insert(Movimientos m) {
+	public boolean insertar(Movimientos m) {
 		boolean result = false;
 		Connection myConnection = Connect.getConnect();
 		String query = "INSERT INTO Movimientos (Correo, Fecha, Cantidad, Concepto) VALUES (?,?,?,?)";
@@ -41,10 +42,10 @@ public class MovimientoDao {
 	 * @param id
 	 * @return
 	 */
-	public boolean delete(String id) {
+	public boolean delete(String correo) {
 		boolean result = false;
 		Connection myConnection = Connect.getConnect();
-		String query = "DELETE FROM Movimientos WHERE ID = " + id;
+		String query = "DELETE * FROM Movimientos WHERE Correo = " + correo;
 
 		try {
 			PreparedStatement sentence = myConnection.prepareStatement(query);

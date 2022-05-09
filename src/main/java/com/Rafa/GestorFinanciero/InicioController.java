@@ -1,19 +1,23 @@
 package com.Rafa.GestorFinanciero;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.Rafa.GestorFinanciero.utils.DataService;
+import com.Rafa.GestorFinanciero.utils.Util;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
-public class MenuController implements Initializable{
-	
+public class InicioController implements Initializable{
+
 	@FXML
 	private Label Nombre;
+	@FXML
+	private Label saldo;
 	
 	@FXML
     private void inicio() throws IOException {
@@ -41,10 +45,10 @@ public class MenuController implements Initializable{
     }
 	
 
-	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-			Nombre.setText(DataService.user.getNombre());
+
+		Nombre.setText(DataService.user.getNombre());
+		saldo.setText(String.valueOf(DataService.user.getDinero()+" €"));
 		
 	}
 }

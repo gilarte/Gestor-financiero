@@ -36,7 +36,7 @@ public class RegistroController {
 			if(UsuarioDao.search(Correo.getText())) {
 				
 			}else
-			if (validaCorreo(Correo.getText()) && esDecimal(Saldo.getText()) && Contraseña.getText().matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")) {
+			if (Util.validaCorreo(Correo.getText()) && esDecimal(Saldo.getText()) && Contraseña.getText().matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")) {
 				Double d = Double.parseDouble(Saldo.getText());
 				Usuario aux = new Usuario(Correo.getText(), Nombre.getText(), Contraseña.getText(), d);
 				UsuarioDao.insert(aux);
@@ -54,24 +54,7 @@ public class RegistroController {
 		}
 	}
 
-	/**
-	 * Método que verifica que el correo introducido es válido
-	 * @param email: correo que ha introducido el cliente
-	 * @return true si es correcto el correo, false si no lo es
-	 */
-	public boolean validaCorreo(String email) {
-		boolean valid = false;
-		Pattern pattern = Pattern.compile(
-				"^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
-
-		Matcher mather = pattern.matcher(email);
-
-		if (mather.find() == true) {
-			// correo válido
-			valid = true;
-		}
-		return valid;
-	}
+	
 
 
 	/**
