@@ -6,6 +6,10 @@ import javafx.fxml.FXML;
 
 public class AcercaDeController {
 
+	/**
+	 * Métodos que llaman a otras escenas
+	 * @throws IOException
+	 */
 	@FXML
     private void volverApp() throws IOException {
         App.setRoot("App");

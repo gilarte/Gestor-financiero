@@ -6,20 +6,37 @@ import com.Rafa.GestorFinanciero.model.Movimientos;
 import com.Rafa.GestorFinanciero.utils.DataService;
 import com.Rafa.GestorFinanciero.utils.Util;
 
-public class Gasto extends MovimientoDao{
+import javafx.scene.control.Label;
 
-	public boolean gasto(Movimientos m) {
+public class Gasto {
+
+	public static boolean gastar(Movimientos m, Label saldo) throws IOException {
 		boolean result = false;
-		if(UsuarioDao.cambiarSaldo(m.getCorreo(), DataService.user.getDinero()-m.getCantidad())) {
-			result=true;
-			try {
-				Util.alertAdd("GASTO", "GASTO REALIZADO CON ÉXITO!", "");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		MovimientoDao dao=new MovimientoDao();
+		if (Util.esDecimal(String.valueOf(m.getCantidad()))) {
+			if (UsuarioDao.cambiarSaldo(m.getCorreo(), (DataService.user.getDinero() - m.getCantidad()))) {
+				if (dao.insertar(m)) {
+					result = true;
+					try {
+						
+						saldo.setText(String.valueOf(DataService.user.getDinero()));
+						Util.alertAdd("INGRESO", "INGRESO REALIZADO CON ÉXITO!", "");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+						Util.print("Error en el ingreso");
+					}
+				}else {
+					Util.errorAdd("ERROR BBDD", "ERROR AL INSERTA MOVIMIENTO EN LA BBDD", "");
+				}
+				
+			} else {
+				Util.errorAdd("FALLO", "EL SALDO NO SE HA PODIDO CAMBIAR", "");
 			}
+		} else {
+			Util.errorAdd("ERROR", "CANTIDAD INVÁLIDA", "");
 		}
-		
+
 		return result;
 	}
 

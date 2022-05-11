@@ -9,9 +9,13 @@ import com.Rafa.GestorFinanciero.utils.Connect;
 import com.Rafa.GestorFinanciero.utils.DataService;
 import com.Rafa.GestorFinanciero.utils.Util;
 
-public abstract class Ingreso extends MovimientoDao {
+import javafx.scene.control.Label;
 
-	public static boolean ingreso(Movimientos m) throws IOException {
+
+public class Ingreso extends MovimientoDao {
+
+
+	public static boolean ingreso(Movimientos m, Label saldo) throws IOException {
 		boolean result = false;
 		MovimientoDao dao=new MovimientoDao();
 		if (Util.esDecimal(String.valueOf(m.getCantidad()))) {
@@ -20,7 +24,7 @@ public abstract class Ingreso extends MovimientoDao {
 					result = true;
 					try {
 						
-						IngresarController.saldo.setText(String.valueOf(DataService.user.getDinero()));
+						saldo.setText(String.valueOf(DataService.user.getDinero()));
 						Util.alertAdd("INGRESO", "INGRESO REALIZADO CON ÉXITO!", "");
 					} catch (IOException e) {
 						// TODO Auto-generated catch block

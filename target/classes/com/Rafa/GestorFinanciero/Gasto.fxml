@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Rafa.GestorFinanciero.MenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Rafa.GestorFinanciero.GastoController">
    <top>
       <Pane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #589db7;" BorderPane.alignment="CENTER">
          <children>
@@ -22,7 +22,7 @@
             <Separator layoutY="45.0" prefHeight="30.0" prefWidth="130.0" />
             <Label layoutX="313.0" layoutY="15.0" style="-fx-font-size: 20px;" text="Gastos" />
             <Separator layoutX="127.0" layoutY="-70.0" orientation="VERTICAL" prefHeight="200.0" />
-            <Label layoutX="51.0" layoutY="30.0" text="Label" />
+            <Label fx:id="nombre" layoutX="51.0" layoutY="30.0" text="Label" />
          </children>
       </Pane>
    </top>
@@ -39,7 +39,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="-2.0" layoutY="114.0" mnemonicParsing="false" onAction="#gasto" onMouseClicked="#gasto" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Gastos">
+            <Button layoutX="-2.0" layoutY="119.0" mnemonicParsing="false" onAction="#gasto" onMouseClicked="#gasto" prefHeight="52.0" prefWidth="134.0" style="-fx-background-color: #086cff;" text="Gastos">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -110,14 +110,14 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label layoutX="192.0" layoutY="55.0" style="-fx-font-size: 25px;" text="???.??€" textFill="WHITE" />
-            <DatePicker layoutX="253.0" layoutY="144.0" prefHeight="25.0" prefWidth="109.0" />
-            <TextField layoutX="253.0" layoutY="104.0" prefHeight="25.0" prefWidth="79.0" />
+            <Label fx:id="saldo" layoutX="192.0" layoutY="55.0" style="-fx-font-size: 25px;" text="???.??€" textFill="WHITE" />
+            <DatePicker fx:id="fecha" layoutX="253.0" layoutY="144.0" prefHeight="25.0" prefWidth="109.0" />
+            <TextField fx:id="cantidad" layoutX="253.0" layoutY="104.0" prefHeight="25.0" prefWidth="79.0" />
             <Text fill="WHITE" layoutX="66.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="Cantidad gastada:" wrappingWidth="162.93671417236328" />
             <Text fill="WHITE" layoutX="66.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="Fecha del gasto:" wrappingWidth="162.93671417236328" />
             <Text fill="WHITE" layoutX="66.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="Concepto:" wrappingWidth="162.93671417236328" />
-            <TextArea layoutX="192.0" layoutY="191.0" prefHeight="56.0" prefWidth="179.0" />
-            <Button layoutX="203.0" layoutY="268.0" mnemonicParsing="false" text="Gastar">
+            <TextArea fx:id="concepto" layoutX="192.0" layoutY="191.0" prefHeight="56.0" prefWidth="179.0" />
+            <Button layoutX="203.0" layoutY="268.0" mnemonicParsing="false" onAction="#crearGasto" onMouseClicked="#crearGasto" text="Gastar">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>

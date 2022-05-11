@@ -26,7 +26,7 @@ public class MovimientoDao implements IMovimientoDao{
 		try {
 			PreparedStatement sentence = myConnection.prepareStatement(query);
 			sentence.setString(1, m.getCorreo());
-			sentence.setTimestamp(2, m.getFecha());
+			sentence.setObject(2, m.getFecha());
 			sentence.setDouble(3, m.getCantidad());
 			sentence.setString(4, m.getConcepto());
 			sentence.executeUpdate();
@@ -65,7 +65,7 @@ public class MovimientoDao implements IMovimientoDao{
 		try {
 			PreparedStatement sentence = myConnection.prepareStatement(query);
 			sentence.setString(1, m.getCorreo());
-			sentence.setTimestamp(2, m.getFecha());
+			sentence.setObject(2, m.getFecha());
 			sentence.setDouble(3, m.getCantidad());
 			sentence.setString(4, m.getConcepto());
 			sentence.executeUpdate();
@@ -88,7 +88,7 @@ public class MovimientoDao implements IMovimientoDao{
 			while (rs.next()) {
 				aux = new Movimientos();
 				aux.setCorreo(rs.getString(1));
-				aux.setFecha(rs.getTimestamp(2));
+				aux.setFecha(rs.getTimestamp(2).toLocalDateTime());
 				aux.setCantidad(rs.getDouble(3));
 				aux.setConcepto(rs.getString(4));
 				list.add(aux);

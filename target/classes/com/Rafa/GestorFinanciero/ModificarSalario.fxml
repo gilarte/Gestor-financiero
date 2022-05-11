@@ -27,22 +27,22 @@
    <left>
       <Pane prefHeight="310.0" prefWidth="129.0" style="-fx-background-color: #589db7;" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" layoutX="-2.0" mnemonicParsing="false" onAction="#inicio" onMouseClicked="#inicio" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Inicio">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" mnemonicParsing="false" onAction="#inicio" onMouseClicked="#inicio" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Inicio">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="-2.0" layoutY="57.0" mnemonicParsing="false" onAction="#ingresar" onMouseClicked="#ingresar" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Ingresar">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="57.0" mnemonicParsing="false" onAction="#ingresar" onMouseClicked="#ingresar" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Ingresar">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="-2.0" layoutY="114.0" mnemonicParsing="false" onAction="#gasto" onMouseClicked="#gasto" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Gastos">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="114.0" mnemonicParsing="false" onAction="#gasto" onMouseClicked="#gasto" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Gastos">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="-2.0" layoutY="171.0" mnemonicParsing="false" onAction="#historial" onMouseClicked="#historial" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Historial">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="171.0" mnemonicParsing="false" onAction="#historial" onMouseClicked="#historial" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Historial">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -52,7 +52,7 @@
                   <Image url="@../Fotos/png-transparent-font-awesome-computer-icons-house-house-angle-logo-home-icon.png" />
                </image>
             </ImageView>
-            <Button alignment="CENTER_RIGHT" layoutX="-2.0" layoutY="228.0" mnemonicParsing="false" onAction="#modificarSaldo" onMouseClicked="#modificarSaldo" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Modificar saldo">
+            <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="-2.0" layoutY="228.0" mnemonicParsing="false" onAction="#modificarSaldo" onMouseClicked="#modificarSaldo" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #086cff;" text="Modificar saldo">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -77,7 +77,7 @@
                   <Image url="@../Fotos/bagofmoney_dollar_4399.png" />
                </image>
             </ImageView>
-            <Button alignment="CENTER" layoutX="-2.0" layoutY="285.0" mnemonicParsing="false" onAction="#salir" onMouseClicked="#salir" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Salir">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="285.0" mnemonicParsing="false" onAction="#salir" onMouseClicked="#salir" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Salir">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

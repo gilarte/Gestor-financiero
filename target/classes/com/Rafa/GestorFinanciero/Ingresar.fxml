@@ -33,7 +33,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button layoutX="-2.0" layoutY="57.0" mnemonicParsing="false" onAction="#ingresar" onMouseClicked="#ingresar" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Ingresar">
+            <Button layoutX="-2.0" layoutY="57.0" mnemonicParsing="false" onAction="#ingresar" onMouseClicked="#ingresar" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #086cff;" text="Ingresar">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>

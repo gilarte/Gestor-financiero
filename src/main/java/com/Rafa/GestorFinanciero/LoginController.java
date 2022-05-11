@@ -25,6 +25,10 @@ import javafx.stage.Stage;
 
 public class LoginController {
 
+	/**
+	 * Métodos que llaman a otras escenas
+	 * @throws IOException
+	 */
 	@FXML
     private void volver() throws IOException {
         App.setRoot("App");
@@ -38,6 +42,9 @@ public class LoginController {
         App.setRoot("OlvidaContraseña");
     }
 	
+	/**
+	 * Variables de la escena Login
+	 */
 	@FXML
 	private TextField Correo;
 	@FXML

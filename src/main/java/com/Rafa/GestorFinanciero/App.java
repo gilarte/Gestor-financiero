@@ -15,6 +15,9 @@ public class App extends Application {
 
     private static Scene scene;
 
+    /**
+     * Método que carga una escena
+     */
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("App"), 640, 401);
@@ -22,6 +25,10 @@ public class App extends Application {
         stage.show();
     }
 
+    /**
+	 * Métodos que llaman a otras escenas
+	 * @throws IOException
+	 */
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
@@ -31,6 +38,10 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
+    /**
+     * Método main que ejecuta el programa
+     * @param args
+     */
     public static void main(String[] args) {
         launch();
     }

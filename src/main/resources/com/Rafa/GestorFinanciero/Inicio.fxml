@@ -25,7 +25,7 @@
    <left>
       <Pane prefHeight="310.0" prefWidth="129.0" style="-fx-background-color: #589db7;" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" layoutX="-2.0" mnemonicParsing="false" onAction="#inicio" onMouseClicked="#inicio" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Inicio">
+            <Button alignment="CENTER" layoutX="-5.0" mnemonicParsing="false" onAction="#inicio" onMouseClicked="#inicio" prefHeight="54.0" prefWidth="137.0" style="-fx-background-color: #086cff;" text="Inicio">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>

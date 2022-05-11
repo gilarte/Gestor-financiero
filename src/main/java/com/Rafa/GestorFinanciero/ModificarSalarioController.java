@@ -56,7 +56,7 @@ public class ModificarSalarioController implements Initializable{
 	
 	@FXML
 	private void nuevoSaldo() throws IOException {
-		if(Util.esDecimal(newSaldo.getText())) {
+		if(Util.esDecimal(newSaldo.getText()) && Util.deStringaDecimal(newSaldo.getText())>=0) {
 			if(UsuarioDao.cambiarSaldo(DataService.user.getCorreo(), Double.parseDouble(newSaldo.getText()))) {
 				DataService.user.setDinero(Double.parseDouble(newSaldo.getText()));
 				saldo.setText(String.valueOf(DataService.user.getDinero()));

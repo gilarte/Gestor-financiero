@@ -1,15 +1,15 @@
 package com.Rafa.GestorFinanciero.model;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class Movimientos {
 
 	private String correo;
-	private Timestamp fecha;
+	private LocalDateTime fecha;
 	private Double cantidad;
 	private String concepto; 
 	
-	public Movimientos(String correo, Timestamp fecha, Double cantidad, String concepto) {
+	public Movimientos(String correo, LocalDateTime fecha, Double cantidad, String concepto) {
 		super();
 		this.correo = correo;
 		this.fecha = fecha;
@@ -17,7 +17,7 @@ public class Movimientos {
 		this.concepto = concepto;
 	}
 	
-	public Movimientos(String correo, Timestamp fecha, Double cantidad) {
+	public Movimientos(String correo, LocalDateTime fecha, Double cantidad) {
 		super();
 		this.correo = correo;
 		this.fecha = fecha;
@@ -41,11 +41,11 @@ public class Movimientos {
 		this.correo = correo;
 	}
 
-	public Timestamp getFecha() {
+	public LocalDateTime getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(Timestamp fecha) {
+	public void setFecha(LocalDateTime fecha) {
 		this.fecha = fecha;
 	}
 

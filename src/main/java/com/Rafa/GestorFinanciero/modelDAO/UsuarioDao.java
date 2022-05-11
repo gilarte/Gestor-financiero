@@ -166,17 +166,13 @@ public class UsuarioDao {
 		boolean valid=false;
 		Connection myConnection = Connect.getConnect();
 		String query = "SELECT Correo, Nombre, Contraseña, Dinero FROM usuario WHERE correo='"+correo+"'";
-		Usuario aux=null;
 		Statement st;
 
 		try {
 			st = myConnection.createStatement();
-			ResultSet rs = st.executeQuery(query);
-			aux=new Usuario();
-			aux.setCorreo(rs.getString(1));
-			if(aux.getCorreo()==correo) {
-				valid=true;
-			}
+			st.executeQuery(query);
+			valid=true;
+			
 		} catch (Exception e) {
 			valid=false;
 		}
