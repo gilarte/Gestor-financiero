@@ -14,13 +14,13 @@ public class Gasto {
 		boolean result = false;
 		MovimientoDao dao=new MovimientoDao();
 		if (Util.esDecimal(String.valueOf(m.getCantidad()))) {
-			if (UsuarioDao.cambiarSaldo(m.getCorreo(), (DataService.user.getDinero() - m.getCantidad()))) {
+			if (UsuarioDao.cambiarSaldo(m.getCorreo(), (DataService.user.getDinero() + m.getCantidad()))) {
 				if (dao.insertar(m)) {
 					result = true;
 					try {
 						
 						saldo.setText(String.valueOf(DataService.user.getDinero()));
-						Util.alertAdd("INGRESO", "INGRESO REALIZADO CON ÉXITO!", "");
+						Util.alertAdd("GASTO", "GASTO REALIZADO CON ÉXITO!", "");
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();

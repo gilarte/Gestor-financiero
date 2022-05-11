@@ -95,7 +95,7 @@ public class IngresarController implements Initializable{
 					Movimientos m=new Movimientos(DataService.user.getCorreo(), fecha, Util.deStringaDecimal(this.cantidad.getText()), this.concepto.getText());
 					Ingreso.ingreso(m, this.saldo);
 					this.cantidad.setText("");
-					this.fecha=null;
+					this.fecha.setValue(null);;
 					this.concepto.setText("");
 				}else {
 					Util.errorAdd("ERROR", "INTRODUCE CANTIDAD VÁLIDA", "");
