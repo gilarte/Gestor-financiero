@@ -42,10 +42,10 @@ public class MovimientoDao implements IMovimientoDao{
 	 * @param id
 	 * @return
 	 */
-	public boolean delete(String correo) {
+	public boolean delete(int id) {
 		boolean result = false;
 		Connection myConnection = Connect.getConnect();
-		String query = "DELETE * FROM Movimientos WHERE Correo = " + correo;
+		String query = "DELETE * FROM Movimientos WHERE id = " + id;
 
 		try {
 			PreparedStatement sentence = myConnection.prepareStatement(query);
@@ -60,14 +60,13 @@ public class MovimientoDao implements IMovimientoDao{
 	public boolean update(Movimientos m) {
 		boolean result = false;
 		Connection myConnection = Connect.getConnect();
-		String query = "UPDATE Film SET Title=?, Type=?, Duration=?, Year=?, Rating=? WHERE ID_F=?";
+		String query = "UPDATE movimientos SET Concepto=?, Cantidad=?, Fecha=? WHERE id=?";
 
 		try {
 			PreparedStatement sentence = myConnection.prepareStatement(query);
-			sentence.setString(1, m.getCorreo());
-			sentence.setObject(2, m.getFecha());
-			sentence.setDouble(3, m.getCantidad());
-			sentence.setString(4, m.getConcepto());
+			sentence.setString(1, m.getConcepto());
+			sentence.setObject(3, m.getFecha());
+			sentence.setDouble(2, m.getCantidad());
 			sentence.executeUpdate();
 			result = true;
 		} catch (SQLException e) {
@@ -79,7 +78,7 @@ public class MovimientoDao implements IMovimientoDao{
 	public List<Movimientos> getAll() {
 		List<Movimientos> list = new ArrayList<Movimientos>();
 		Connection myConnection = Connect.getConnect();
-		String query = "SELECT ID_F, Title, Type, Duration, Year, Rating FROM Film";
+		String query = "SELECT id, Correo, Fecha, Cantidad, Concepto FROM movimientos";
 
 		try {
 			Statement st = myConnection.createStatement();
@@ -87,10 +86,11 @@ public class MovimientoDao implements IMovimientoDao{
 			Movimientos aux = null;
 			while (rs.next()) {
 				aux = new Movimientos();
-				aux.setCorreo(rs.getString(1));
-				aux.setFecha(rs.getTimestamp(2).toLocalDateTime());
-				aux.setCantidad(rs.getDouble(3));
-				aux.setConcepto(rs.getString(4));
+				aux.setId(rs.getInt(1));
+				aux.setCorreo(rs.getString(2));
+				aux.setFecha(rs.getTimestamp(3).toLocalDateTime());
+				aux.setCantidad(rs.getDouble(4));
+				aux.setConcepto(rs.getString(5));
 				list.add(aux);
 			}
 		} catch (SQLException e) {
@@ -98,4 +98,5 @@ public class MovimientoDao implements IMovimientoDao{
 		}
 		return list;
 	}
+
 }

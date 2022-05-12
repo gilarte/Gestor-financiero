@@ -60,7 +60,8 @@ public class ModificarSalarioController implements Initializable{
 			if(UsuarioDao.cambiarSaldo(DataService.user.getCorreo(), Double.parseDouble(newSaldo.getText()))) {
 				DataService.user.setDinero(Double.parseDouble(newSaldo.getText()));
 				saldo.setText(String.valueOf(DataService.user.getDinero()));
-				Util.alertAdd("Saldo cambiado", "Saldo cambiado con éxito!", "La modificación del saldo no cuenta como un movimiento, por lo que/nNO será registrada en el historial.");
+				Util.alertAdd("Saldo cambiado", "Saldo cambiado con éxito!", "La modificación del saldo no cuenta como un movimiento,\n por lo que NO será registrada en el historial.");
+				this.newSaldo.setText("");
 			}else {
 				Util.errorAdd("ERROR", "Fallo al cambiar en la base de datos", "El valor no ha sido cambiado en la base de datos");
 			}

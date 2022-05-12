@@ -35,9 +35,14 @@ public class RegistroController {
 		try {
 			
 				if (Util.validaCorreo(Correo.getText()) && Util.esDecimal(Saldo.getText()) && Util.deStringaDecimal(Saldo.getText())>=0 && Contraseña.getText().matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")) {
-					if(!UsuarioDao.search(Correo.getText())) {
+					//este if lo tengo que hacer con el search
+					if(!UsuarioDao.search(this.Correo.getText())) {
+						/**
+						String p=Contraseña.getText();
+						p=Util.cifrar(p);*/
 						Double d = Double.parseDouble(Saldo.getText());
 						Usuario aux = new Usuario(Correo.getText(), Nombre.getText(), Contraseña.getText(), d);
+						
 						UsuarioDao.insert(aux);
 						Util.alertAdd("INFORMACION", "USUARIO AÑADIDO", "El usuario se ha añadido correctamente");
 					}else {

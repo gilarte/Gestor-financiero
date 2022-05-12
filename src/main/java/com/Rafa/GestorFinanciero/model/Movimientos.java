@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 public class Movimientos {
 
+	private int id;
 	private String correo;
 	private LocalDateTime fecha;
 	private Double cantidad;
@@ -64,12 +65,23 @@ public class Movimientos {
 	public void setConcepto(String concepto) {
 		this.concepto = concepto;
 	}
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	@Override
 	public String toString() {
-		return "Movimientos [correo=" + correo + ", fecha=" + fecha + ", cantidad=" + cantidad + ", concepto="
-				+ concepto + "]";
+		return "Movimientos [id=" + id + ", correo=" + correo + ", fecha=" + fecha + ", cantidad=" + cantidad
+				+ ", concepto=" + concepto + "]";
 	}
+
+	
 	
 	
 }

@@ -163,20 +163,13 @@ public class UsuarioDao {
 	 * @return true si existe, false si no
 	 */
 	public static boolean search(String correo) {
-		boolean valid=false;
-		Connection myConnection = Connect.getConnect();
-		String query = "SELECT Correo, Nombre, Contraseña, Dinero FROM usuario WHERE correo='"+correo+"'";
-		Statement st;
-
-		try {
-			st = myConnection.createStatement();
-			st.executeQuery(query);
-			valid=true;
-			
-		} catch (Exception e) {
-			valid=false;
+		List<Usuario> lista = getAll();
+		for(Usuario u:lista) {
+			if(u.getCorreo().equals(correo)) {
+				return true;
+			}
 		}
-		return valid;
+		return false;
 	}
 	
 	@FXML
@@ -196,5 +189,6 @@ public class UsuarioDao {
 		
 		return valid;
 	}
+	
 	
 }

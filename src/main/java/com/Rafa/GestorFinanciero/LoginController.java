@@ -62,6 +62,9 @@ public class LoginController {
 		if(aux==null) {
 			Util.errorAdd("ALERTA", "USUARIO NO ENCONTRADO", "El correo introducido o la contraseña son incorrectos.");
 		}else {
+			/*String p=Contrasena.getText();
+			p=Util.cifrar(p);
+			aux.setContraseña(p);*/
 			DataService.user=aux;
 			Util.alertAdd("LOGIN CORRECTO", "¡BIENVENIDO!", "Has iniciado sesion como "+DataService.user.getNombre());
 			App.setRoot("Inicio");

@@ -1,6 +1,8 @@
 package com.Rafa.GestorFinanciero.utils;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -145,4 +147,29 @@ public class Util {
 		}
 		return false;
 	}
+	/**
+	public static String cifrar(String s) {
+        String msg = "";
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hash = md.digest(s.getBytes(StandardCharsets.UTF_8));
+            msg = toHexString(hash);
+            System.out.println(toHexString(hash));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return msg;
+    }
+
+    private static String toHexString(byte[] array){
+        StringBuilder sb = new StringBuilder(array.length*2);
+        for (byte b: array){
+            int value = 0xFF & b;
+            String toAppend = Integer.toHexString(value);
+            sb.append(toAppend);
+        }
+        sb.setLength(sb.length()-1);
+
+        return sb.toString();
+    }*/
 }
