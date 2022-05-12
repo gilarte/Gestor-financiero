@@ -147,6 +147,16 @@ public class Util {
 		}
 		return false;
 	}
+	
+	public static boolean esInteger(String cad) {
+		try {
+			Integer.parseInt(cad);
+			return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
 	/**
 	public static String cifrar(String s) {
         String msg = "";

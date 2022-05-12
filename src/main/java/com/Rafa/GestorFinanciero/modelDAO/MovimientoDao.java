@@ -1,5 +1,6 @@
 package com.Rafa.GestorFinanciero.modelDAO;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,6 +12,7 @@ import java.util.List;
 import com.Rafa.GestorFinanciero.interfaces.IMovimientoDao;
 import com.Rafa.GestorFinanciero.model.Movimientos;
 import com.Rafa.GestorFinanciero.utils.Connect;
+import com.Rafa.GestorFinanciero.utils.Util;
 
 public class MovimientoDao implements IMovimientoDao{
 	/**
@@ -41,19 +43,31 @@ public class MovimientoDao implements IMovimientoDao{
 	 * Borra un movimiento de la tabla movimientos
 	 * @param id
 	 * @return
+	 * @throws  
 	 */
-	public boolean delete(int id) {
+	public boolean delete(String id) {
 		boolean result = false;
-		Connection myConnection = Connect.getConnect();
-		String query = "DELETE * FROM Movimientos WHERE id = " + id;
 
-		try {
-			PreparedStatement sentence = myConnection.prepareStatement(query);
-			sentence.executeUpdate();
-			result = true;
-		} catch (SQLException e) {
-			e.printStackTrace();
+		if(Util.esInteger(id)) {
+			Connection myConnection = Connect.getConnect();
+			String query = "DELETE FROM Movimientos WHERE id = '" + id+"'";
+
+			try {
+				PreparedStatement sentence = myConnection.prepareStatement(query);
+				sentence.executeUpdate();
+				result = true;
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}else {
+			try {
+				Util.errorAdd("ERROR", "NO ES ENTERO EL ID", "");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+		
 		return result;
 	}
 

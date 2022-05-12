@@ -10,7 +10,9 @@ import java.util.ResourceBundle;
 
 import com.Rafa.GestorFinanciero.model.Movimientos;
 import com.Rafa.GestorFinanciero.modelDAO.MovimientoDao;
+import com.Rafa.GestorFinanciero.modelDAO.UsuarioDao;
 import com.Rafa.GestorFinanciero.utils.DataService;
+import com.Rafa.GestorFinanciero.utils.Util;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -85,10 +87,14 @@ public class HistorialController implements Initializable{
 		this.nombre.setText(DataService.user.getNombre());
 		this.saldo.setText(String.valueOf(DataService.user.getDinero()));
 		this.error.setText("");
+		this.idBorrar.setText("");
 		
 		this.conigureTable();
 		misMovimientos = (List<Movimientos>) m.getAll();
 		tabla.setItems(FXCollections.observableArrayList(misMovimientos));
+		tabla.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+			muestraInfo(newValue);
+		});
 	}
 	
 	public void conigureTable() {
@@ -118,5 +124,32 @@ public class HistorialController implements Initializable{
 			});
 		
 	}
+	
+	private void muestraInfo(Movimientos p) {
+
+		if (p != null) {
+			idBorrar.setText(Integer.toString(p.getId()));
+
+		} else {
+			idBorrar.setText("");
+		}
+	}
+	
+	public void borraMov() throws IOException {
+		MovimientoDao m = new MovimientoDao();
+		if(Util.esInteger(this.idBorrar.getText())) {
+			Util.alertAdd("MOVIMIENTO BORRADO", "MOVIMIENTO BORRARDO", "el movimiento con la id "+this.idBorrar.getText()+" ha sido borrado");
+			try {
+				App.setRoot("Historial");
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			m.delete(this.idBorrar.getText());
+			
+		}else {
+			this.error.setText("Selecciona un movimiento para borrarlo");
+		}
+	}
+	
 
 }

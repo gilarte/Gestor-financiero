@@ -6,7 +6,6 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -123,10 +122,10 @@
                   <TableColumn fx:id="concepto" prefWidth="212.79998779296875" text="Concepto" />
               </columns>
             </TableView>
-            <Button layoutX="365.0" layoutY="95.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="51.0" text="Borrar" />
-            <Label fx:id="error" alignment="CENTER" layoutX="158.0" layoutY="126.0" prefHeight="17.0" prefWidth="158.0" style="-fx-font: red;" text="ErrorMessage" textFill="RED" />
+            <Button layoutX="365.0" layoutY="95.0" mnemonicParsing="false" onAction="#borraMov" prefHeight="20.0" prefWidth="51.0" text="Borrar" />
+            <Label fx:id="error" alignment="CENTER" layoutX="74.0" layoutY="126.0" prefHeight="17.0" prefWidth="323.0" style="-fx-font: red;" text="ErrorMessage" textFill="RED" />
             <Label layoutX="31.0" layoutY="89.0" prefHeight="37.0" prefWidth="258.0" style="-fx-font-size: 20px;" text="Borra un movimiento por id:" textFill="WHITE" />
-            <TextField layoutX="297.0" layoutY="95.0" prefHeight="25.0" prefWidth="52.0" />
+            <Label fx:id="idBorrar" alignment="CENTER" contentDisplay="CENTER" layoutX="294.0" layoutY="93.0" prefHeight="27.0" prefWidth="58.0" style="-fx-font-size: 20px;" text="Label" textFill="#469cff" />
          </children>
       </Pane>
    </center>

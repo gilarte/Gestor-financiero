@@ -7,7 +7,7 @@ import com.Rafa.GestorFinanciero.model.Movimientos;
 public interface IMovimientoDao {
 
 	public boolean insertar(Movimientos m);
-	public boolean delete(int id);
+	public boolean delete(String id);
 	public boolean update(Movimientos m);
 	public List<Movimientos> getAll();
 
