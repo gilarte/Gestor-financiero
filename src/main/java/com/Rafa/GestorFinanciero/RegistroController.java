@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
 import com.Rafa.GestorFinanciero.model.Usuario;
 import com.Rafa.GestorFinanciero.modelDAO.UsuarioDao;
 import com.Rafa.GestorFinanciero.utils.Util;
@@ -41,7 +43,7 @@ public class RegistroController {
 						String p=Contraseña.getText();
 						p=Util.cifrar(p);*/
 						Double d = Double.parseDouble(Saldo.getText());
-						Usuario aux = new Usuario(Correo.getText(), Nombre.getText(), Contraseña.getText(), d);
+						Usuario aux = new Usuario(Correo.getText(), Nombre.getText(), DigestUtils.sha256Hex(Contraseña.getText()), d);
 						
 						UsuarioDao.insert(aux);
 						Util.alertAdd("INFORMACION", "USUARIO AÑADIDO", "El usuario se ha añadido correctamente");

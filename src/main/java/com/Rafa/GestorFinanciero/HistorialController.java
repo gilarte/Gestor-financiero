@@ -32,6 +32,9 @@ public class HistorialController implements Initializable{
 	List<Movimientos> misMovimientos;
 	MovimientoDao m = new MovimientoDao();
 	
+	/**
+	 * Elementos de la escena
+	 */
 	@FXML
 	private Label nombre;
 	@FXML
@@ -80,7 +83,9 @@ public class HistorialController implements Initializable{
         App.setRoot("ModificarSalario");
     }
 	
-	
+	/**
+	 * Metodo que se ejecuta al cargar la escena
+	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
@@ -90,13 +95,16 @@ public class HistorialController implements Initializable{
 		this.idBorrar.setText("");
 		
 		this.conigureTable();
-		misMovimientos = (List<Movimientos>) m.getAll();
+		misMovimientos = (List<Movimientos>) m.getAll(DataService.user.getCorreo());
 		tabla.setItems(FXCollections.observableArrayList(misMovimientos));
 		tabla.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
 			muestraInfo(newValue);
 		});
 	}
 	
+	/**
+	 * Método que carga el TableView
+	 */
 	public void conigureTable() {
 		//ID
 		id.setCellValueFactory(misMovimientos ->{
@@ -125,6 +133,10 @@ public class HistorialController implements Initializable{
 		
 	}
 	
+	/**
+	 * Muestra en el label la id del movimiento seleccionado en la tabla
+	 * @param p Movimiento seleccionado
+	 */
 	private void muestraInfo(Movimientos p) {
 
 		if (p != null) {
@@ -135,17 +147,16 @@ public class HistorialController implements Initializable{
 		}
 	}
 	
+	/**
+	 * Borra el movimiento que tiene la id del label
+	 * @throws IOException
+	 */
 	public void borraMov() throws IOException {
 		MovimientoDao m = new MovimientoDao();
 		if(Util.esInteger(this.idBorrar.getText())) {
-			Util.alertAdd("MOVIMIENTO BORRADO", "MOVIMIENTO BORRARDO", "el movimiento con la id "+this.idBorrar.getText()+" ha sido borrado");
-			try {
+				Util.alertAdd("MOVIMIENTO BORRADO", "MOVIMIENTO BORRARDO", "el movimiento con la id "+this.idBorrar.getText()+" ha sido borrado");
+				m.delete(this.idBorrar.getText());
 				App.setRoot("Historial");
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
-			m.delete(this.idBorrar.getText());
-			
 		}else {
 			this.error.setText("Selecciona un movimiento para borrarlo");
 		}

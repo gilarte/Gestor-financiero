@@ -14,11 +14,18 @@ import javafx.scene.control.Label;
 
 public class InicioController implements Initializable{
 
+	/**
+	 * Elementos de la escena
+	 */
 	@FXML
 	private Label Nombre;
 	@FXML
 	private Label saldo;
 	
+	/**
+	 * Cambios de escena
+	 * @throws IOException
+	 */
 	@FXML
     private void inicio() throws IOException {
         App.setRoot("Inicio");
@@ -44,7 +51,9 @@ public class InicioController implements Initializable{
         App.setRoot("ModificarSalario");
     }
 	
-
+	/**
+	 * Metodo que se ejecuta al cargar la escena
+	 */
 	public void initialize(URL location, ResourceBundle resources) {
 
 		Nombre.setText(DataService.user.getNombre());

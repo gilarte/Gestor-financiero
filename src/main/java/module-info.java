@@ -6,6 +6,7 @@ module com.Rafa.GestorFinanciero {
     requires transitive java.desktop;
 	requires java.xml.bind;
 	requires javafx.base;
+	requires org.apache.commons.codec;
     
     opens com.Rafa.GestorFinanciero to javafx.fxml,java.xml.bind;
     opens com.Rafa.GestorFinanciero.utils to java.xml.bind;

@@ -66,6 +66,9 @@ public class GastoController implements Initializable{
         App.setRoot("ModificarSalario");
     }
 	
+	/**
+	 * Metodo que se ejecuta al cargar la escena
+	 */
 	public void initialize(URL location, ResourceBundle resources) {
 
 		nombre.setText(DataService.user.getNombre());
@@ -73,11 +76,17 @@ public class GastoController implements Initializable{
 		
 	}
 	
+	/**
+	 * Refresca el salario
+	 */
 	public void cargaDatos() {
 		this.saldoCliente.setText(DataService.user.getDinero()+" €");
 	}
 	
-	
+	/**
+	 * Crea un nuevo movimiento en la base de datos controlando la validacion de formulario
+	 * @throws IOException
+	 */
 	@FXML
 	private void crearGasto() throws IOException {
 		

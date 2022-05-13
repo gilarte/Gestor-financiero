@@ -68,6 +68,9 @@ public class IngresarController implements Initializable{
         App.setRoot("ModificarSalario");
     }
 	
+	/**
+	 * Metodo que se ejecuta al cargar la escena
+	 */
 	public void initialize(URL location, ResourceBundle resources) {
 
 		nombre.setText(DataService.user.getNombre());
@@ -75,7 +78,10 @@ public class IngresarController implements Initializable{
 		
 	}
 	
-	
+	/**
+	 * Crea un nuevo movimiento en la base de datos controlando la validacion de formulario
+	 * @throws IOException
+	 */
 	@FXML
 	private void crearIngreso() throws IOException {
 		//Util.validateJavaDate(fecha.getValue().toString())

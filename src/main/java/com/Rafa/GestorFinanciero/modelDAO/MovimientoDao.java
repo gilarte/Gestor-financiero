@@ -89,10 +89,10 @@ public class MovimientoDao implements IMovimientoDao{
 		return result;
 	}
 
-	public List<Movimientos> getAll() {
+	public List<Movimientos> getAll(String correo) {
 		List<Movimientos> list = new ArrayList<Movimientos>();
 		Connection myConnection = Connect.getConnect();
-		String query = "SELECT id, Correo, Fecha, Cantidad, Concepto FROM movimientos";
+		String query = "SELECT id, Correo, Fecha, Cantidad, Concepto FROM movimientos WHERE Correo='"+correo+"'";
 
 		try {
 			Statement st = myConnection.createStatement();

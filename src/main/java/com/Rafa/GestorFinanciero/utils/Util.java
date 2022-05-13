@@ -8,10 +8,12 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
@@ -60,6 +62,31 @@ public class Util {
 		alert.show();
 		Stage s = (Stage) alert.getDialogPane().getScene().getWindow();
 		s.toFront();
+	}
+	
+	/**
+	 * Muestra una ventana de confirmación
+	 * @param titulo
+	 * @param header
+	 * @param content
+	 * @return
+	 * @throws IOException
+	 */
+	public static boolean confirmacion(String titulo, String header, String content) throws IOException {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle(titulo);
+		alert.setHeaderText(header);
+		alert.setContentText(content);
+		alert.show();
+		Stage s = (Stage) alert.getDialogPane().getScene().getWindow();
+		s.toFront();
+		
+		Optional<ButtonType> result = alert.showAndWait();
+		if(result.get()==ButtonType.OK) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 
 	/**
@@ -141,6 +168,11 @@ public class Util {
 		}
 	}
 	
+	/**
+	 * Comprueba que un double es positivo
+	 * @param x double que va a ser comprobado
+	 * @return true si es positivo, false si no lo es
+	 */
 	public static boolean esPositivo(Double x) {
 		if(x>0) {
 			return true;
@@ -148,6 +180,11 @@ public class Util {
 		return false;
 	}
 	
+	/**
+	 * Comprueba que una cadena es un integer
+	 * @param cad cadena que va a ser comprobada
+	 * @return true si es un integer, false si no
+	 */
 	public static boolean esInteger(String cad) {
 		try {
 			Integer.parseInt(cad);

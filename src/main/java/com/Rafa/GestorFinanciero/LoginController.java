@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.swing.JOptionPane;
 
@@ -57,7 +58,7 @@ public class LoginController {
 	@FXML
 	public void validaContraseña() throws IOException {
 		String correo=Correo.getText();
-		String contrasena=Contrasena.getText();
+		String contrasena=DigestUtils.sha256Hex(Contrasena.getText());
 		Usuario aux=UsuarioDao.identificar(correo, contrasena);
 		if(aux==null) {
 			Util.errorAdd("ALERTA", "USUARIO NO ENCONTRADO", "El correo introducido o la contraseña son incorrectos.");
