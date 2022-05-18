@@ -71,10 +71,13 @@ public class MovimientoDao implements IMovimientoDao{
 		return result;
 	}
 
+	/**
+	 * Método que recibe un movimiento con el id movimiento que va a ser actualizado y sus nuevos datos 
+	 */
 	public boolean update(Movimientos m) {
 		boolean result = false;
 		Connection myConnection = Connect.getConnect();
-		String query = "UPDATE movimientos SET Concepto=?, Cantidad=?, Fecha=? WHERE id=?";
+		String query = "UPDATE movimientos SET Concepto=?, Cantidad=?, Fecha=? WHERE id='"+m.getId()+"'";
 
 		try {
 			PreparedStatement sentence = myConnection.prepareStatement(query);
@@ -89,6 +92,9 @@ public class MovimientoDao implements IMovimientoDao{
 		return result;
 	}
 
+	/**
+	 * Método qe devuelve una lista de los Movimientos que haya realizado el usuario con el correo recibido
+	 */
 	public List<Movimientos> getAll(String correo) {
 		List<Movimientos> list = new ArrayList<Movimientos>();
 		Connection myConnection = Connect.getConnect();

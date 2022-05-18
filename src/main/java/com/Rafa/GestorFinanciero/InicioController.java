@@ -3,6 +3,7 @@ package com.Rafa.GestorFinanciero;
 import java.io.IOException;
 import java.io.Serializable;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
 import com.Rafa.GestorFinanciero.utils.DataService;
@@ -57,7 +58,8 @@ public class InicioController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 
 		Nombre.setText(DataService.user.getNombre());
-		saldo.setText(String.valueOf(DataService.user.getDinero()+" €"));
+	    DecimalFormat df = new DecimalFormat("###.##");
+		saldo.setText(String.valueOf(df.format(DataService.user.getDinero())+" €"));
 		
 	}
 }

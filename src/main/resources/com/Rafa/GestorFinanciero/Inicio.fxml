@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Rafa.GestorFinanciero.InicioController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Rafa.GestorFinanciero.InicioController">
    <top>
       <Pane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #589db7;" BorderPane.alignment="CENTER">
          <children>
@@ -25,19 +25,19 @@
    <left>
       <Pane prefHeight="310.0" prefWidth="129.0" style="-fx-background-color: #589db7;" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" layoutX="-5.0" mnemonicParsing="false" onAction="#inicio" onMouseClicked="#inicio" prefHeight="54.0" prefWidth="137.0" style="-fx-background-color: #086cff;" styleClass="menu" stylesheets="@Style.css" text="Inicio">
+            <Button alignment="CENTER" layoutX="-5.0" mnemonicParsing="false" onAction="#inicio" onMouseClicked="#inicio" prefHeight="54.0" prefWidth="137.0" style="-fx-background-color: #086cff;" text="Inicio">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button layoutX="-2.0" layoutY="57.0" mnemonicParsing="false" onAction="#ingresar" onMouseClicked="#ingresar" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" styleClass="menu" stylesheets="@Style.css" text="Ingresar">
+            <Button layoutX="-2.0" layoutY="57.0" mnemonicParsing="false" onAction="#ingresar" onMouseClicked="#ingresar" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Ingresar">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button layoutX="-2.0" layoutY="114.0" mnemonicParsing="false" onAction="#gasto" onMouseClicked="#gasto" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" styleClass="menu" stylesheets="@Style.css" text="Gastos">
+            <Button layoutX="-2.0" layoutY="114.0" mnemonicParsing="false" onAction="#gasto" onMouseClicked="#gasto" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Gastos">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button layoutX="-2.0" layoutY="171.0" mnemonicParsing="false" onAction="#historial" onMouseClicked="#historial" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" styleClass="menu" stylesheets="@Style.css" text="Historial">
+            <Button layoutX="-2.0" layoutY="171.0" mnemonicParsing="false" onAction="#historial" onMouseClicked="#historial" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Historial">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
@@ -46,7 +46,7 @@
                   <Image url="@../Fotos/png-transparent-font-awesome-computer-icons-house-house-angle-logo-home-icon.png" />
                </image>
             </ImageView>
-            <Button alignment="CENTER_RIGHT" layoutX="-2.0" layoutY="228.0" mnemonicParsing="false" onAction="#modificarSaldo" onMouseClicked="#modificarSaldo" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" styleClass="menu" stylesheets="@Style.css" text="Modificar saldo">
+            <Button alignment="CENTER_RIGHT" layoutX="-2.0" layoutY="228.0" mnemonicParsing="false" onAction="#modificarSaldo" onMouseClicked="#modificarSaldo" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Modificar saldo">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
@@ -70,7 +70,7 @@
                   <Image url="@../Fotos/bagofmoney_dollar_4399.png" />
                </image>
             </ImageView>
-            <Button alignment="CENTER" layoutX="-2.0" layoutY="285.0" mnemonicParsing="false" onAction="#salir" onMouseClicked="#salir" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" styleClass="menu" stylesheets="@Style.css" text="Salir">
+            <Button alignment="CENTER" layoutX="-2.0" layoutY="285.0" mnemonicParsing="false" onAction="#salir" onMouseClicked="#salir" prefHeight="57.0" prefWidth="134.0" style="-fx-background-color: #1d829e;" text="Salir">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
@@ -95,11 +95,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button layoutX="6.0" layoutY="2.0" mnemonicParsing="false" style="-fx-background-color: tr;" text="Cargar datos" textFill="WHITE" underline="true">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></Button>
-            <Label fx:id="saldo" alignment="CENTER" contentDisplay="CENTER" layoutX="164.0" layoutY="149.0" prefHeight="59.0" prefWidth="143.0" style="-fx-font-size: 40px;" text="???.??€" textFill="WHITE" />
+            <Label fx:id="saldo" alignment="CENTER" contentDisplay="CENTER" layoutX="164.0" layoutY="149.0" prefHeight="59.0" prefWidth="161.0" style="-fx-font-size: 40px;" text="???.??€" textFill="WHITE" />
          </children></Pane>
    </center>
 </BorderPane>

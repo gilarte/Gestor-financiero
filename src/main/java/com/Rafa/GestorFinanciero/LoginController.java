@@ -14,6 +14,7 @@ import com.Rafa.GestorFinanciero.model.Usuario;
 import com.Rafa.GestorFinanciero.modelDAO.UsuarioDao;
 import com.Rafa.GestorFinanciero.utils.Connect;
 import com.Rafa.GestorFinanciero.utils.DataService;
+import com.Rafa.GestorFinanciero.utils.Loggers;
 import com.Rafa.GestorFinanciero.utils.Util;
 
 import javafx.fxml.FXML;
@@ -62,6 +63,7 @@ public class LoginController {
 		Usuario aux=UsuarioDao.identificar(correo, contrasena);
 		if(aux==null) {
 			Util.errorAdd("ALERTA", "USUARIO NO ENCONTRADO", "El correo introducido o la contraseña son incorrectos.");
+			Loggers.LogsSevere("No se ha podido iniciar sesión");
 		}else {
 			/*String p=Contrasena.getText();
 			p=Util.cifrar(p);
@@ -69,6 +71,7 @@ public class LoginController {
 			DataService.user=aux;
 			Util.alertAdd("LOGIN CORRECTO", "¡BIENVENIDO!", "Has iniciado sesion como "+DataService.user.getNombre());
 			App.setRoot("Inicio");
+			Loggers.LogsInfo("Sesión iniciada con el usuario "+DataService.user.getNombre());
 		}
 		
 	}

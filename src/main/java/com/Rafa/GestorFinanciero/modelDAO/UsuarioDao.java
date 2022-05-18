@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.Rafa.GestorFinanciero.interfaces.IUsuariosDAO;
 import com.Rafa.GestorFinanciero.model.Usuario;
 import com.Rafa.GestorFinanciero.utils.Connect;
 import com.Rafa.GestorFinanciero.utils.DataService;
@@ -18,7 +19,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
-public class UsuarioDao {
+public class UsuarioDao implements IUsuariosDAO{
 
 	/**
 	 * Inserta un usuario a la base de datos
@@ -26,7 +27,7 @@ public class UsuarioDao {
 	 * @param u usuario que va a ser agregado
 	 * @return true si se ha agregado, false si no
 	 */
-	public static boolean insert(Usuario u) {
+	public boolean insert(Usuario u) {
 		boolean result = false;
 		Connection myConnection = Connect.getConnect();
 		String query = "INSERT INTO usuario (Correo, Nombre, Contraseña, Dinero) VALUES (?,?,?,?)";
@@ -51,7 +52,7 @@ public class UsuarioDao {
 	 * @param correo: correo del usuario que va a ser borrado
 	 * @return true si se ha borrado, false si no
 	 */
-	public static boolean delete(String correo) {
+	public boolean delete(String correo) {
 		boolean result = false;
 		Connection myConnection = Connect.getConnect();
 		String query = "DELETE FROM Usuario WHERE Correo = " + correo;
@@ -72,7 +73,7 @@ public class UsuarioDao {
 	 * @param u usuario que va a ser modificado
 	 * @return true si se ha modificado correctamente, false si no
 	 */
-	public static boolean update(Usuario u) {
+	public boolean update(Usuario u) {
 		boolean result = false;
 		Connection myConnection = Connect.getConnect();
 		String query = "UPDATE Usuario SET Nombre=?, Contraseña=?, Dinero=? WHERE Correo=?";
@@ -96,7 +97,7 @@ public class UsuarioDao {
 	 * 
 	 * @return devuelve una lista con todos los usuarios
 	 */
-	public static List<Usuario> getAll() {
+	public List<Usuario> getAll() {
 		ArrayList<Usuario> list = new ArrayList<Usuario>();
 		Connection myConnection = Connect.getConnect();
 		String query = "SELECT Correo, Nombre, Contraseña, Dinero FROM usuario";
@@ -163,7 +164,8 @@ public class UsuarioDao {
 	 * @return true si existe, false si no
 	 */
 	public static boolean search(String correo) {
-		List<Usuario> lista = getAll();
+		UsuarioDao dao=new UsuarioDao();
+		List<Usuario> lista = dao.getAll();
 		for(Usuario u:lista) {
 			if(u.getCorreo().equals(correo)) {
 				return true;
@@ -172,6 +174,12 @@ public class UsuarioDao {
 		return false;
 	}
 	
+	/**
+	 * Método cambia el dinero de un usuario
+	 * @param correo: es el correo del usuario que va a cambiar su dinero
+	 * @param newSaldo: es la nueva cantidad de dinero que va a tener ese usuario
+	 * @return true si se ha cambiado, false si no
+	 */
 	@FXML
 	public static boolean cambiarSaldo(String correo, Double newSaldo) {
 		boolean valid=false;

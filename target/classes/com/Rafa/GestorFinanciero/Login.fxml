@@ -32,12 +32,12 @@
             </Label>
             <PasswordField fx:id="Contrasena" alignment="CENTER" layoutX="244.0" layoutY="200.0" promptText="Contraseña" />
             <TextField fx:id="Correo" alignment="CENTER" layoutX="226.0" layoutY="147.0" prefHeight="26.0" prefWidth="186.0" promptText="Correo electrónico" />
-            <Button layoutX="240.0" layoutY="287.0" mnemonicParsing="false" onAction="#Login" onMouseClicked="#Login" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: tr;" text="He olvidado mi contraseña" textFill="#0015ff" underline="true">
+            <Button layoutX="240.0" layoutY="287.0" mnemonicParsing="false" onAction="#Login" onMouseClicked="#Login" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: transparent;" text="He olvidado mi contraseña" textFill="#0015ff" underline="true">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="527.0" layoutY="360.0" mnemonicParsing="false" onAction="#volver" onMouseClicked="#volver" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: tr;" text="Volver" underline="true">
+            <Button layoutX="527.0" layoutY="360.0" mnemonicParsing="false" onAction="#volver" onMouseClicked="#volver" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: transparent;" text="Volver" underline="true">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

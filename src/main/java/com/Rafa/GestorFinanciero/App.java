@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import com.Rafa.GestorFinanciero.utils.Loggers;
+
 /**
  * JavaFX App
  */
@@ -31,6 +33,7 @@ public class App extends Application {
 	 */
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
+        Loggers.LogsInfo("Vista cargada");
     }
 
     /**

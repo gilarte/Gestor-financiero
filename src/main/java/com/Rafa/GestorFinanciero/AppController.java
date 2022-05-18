@@ -6,6 +6,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
+/**
+ * Controlador de la vista App
+ * @author Rafa Gilarte
+ *
+ */
 public class AppController {
 
 	/**

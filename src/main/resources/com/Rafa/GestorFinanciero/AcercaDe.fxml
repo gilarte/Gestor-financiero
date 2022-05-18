@@ -18,6 +18,6 @@
       <Text fill="WHITE" layoutX="63.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="Linkedin:" wrappingWidth="80.53668212890625" />
       <Text fill="#bfb5b5" layoutX="178.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="https://github.com/gilarte" wrappingWidth="335.73663330078125" />
       <Text fill="#bfb5b5" layoutX="178.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20px;" text="linkedin.com/in/rafaelagn" wrappingWidth="335.73663330078125" />
-      <Button layoutX="274.0" layoutY="346.0" mnemonicParsing="false" onAction="#volverApp" onMouseClicked="#volverApp" style="-fx-background-color: tr;" text="Cerrar" textFill="BLUE" underline="true" />
+      <Button layoutX="274.0" layoutY="346.0" mnemonicParsing="false" onAction="#volverApp" onMouseClicked="#volverApp" style="-fx-background-color: transparent;" text="Cerrar" textFill="BLUE" underline="true" />
    </children>
 </Pane>

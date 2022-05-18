@@ -4,7 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05f3d494-199a-45a6-beec-0bf7750a6885" name="Changes" comment="" />
+    <list default="true" id="05f3d494-199a-45a6-beec-0bf7750a6885" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/AcercaDeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/AcercaDeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/GastoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/GastoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/HistorialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/HistorialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/IngresarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/IngresarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/InicioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/InicioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/MenuController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/ModificarSalarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/ModificarSalarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/PrimaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/RegistroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/RegistroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/SecondaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/interfaces/IDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/model/Movimientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/model/Movimientos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/modelDAO/Gasto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/modelDAO/Gasto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/modelDAO/Ingreso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/modelDAO/Ingreso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/modelDAO/MovimientoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/modelDAO/MovimientoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/modelDAO/UsuarioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Rafa/GestorFinanciero/modelDAO/UsuarioDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/AcercaDe.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/AcercaDe.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/App.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/App.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Gasto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Gasto.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Historial.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Historial.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Ingresar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Ingresar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Inicio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/ModificarSalario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/ModificarSalario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/OlvidaContraseña.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/OlvidaContraseña.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Registro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Registro.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/Rafa/GestorFinanciero/Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/AcercaDe.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/AcercaDe.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/AcercaDeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/AcercaDeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/App.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/App.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/AppController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Gasto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Gasto.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/GastoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/GastoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Historial.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Historial.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/HistorialController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/HistorialController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Ingresar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Ingresar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/IngresarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/IngresarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Inicio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/InicioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/InicioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/MenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/ModificarSalario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/ModificarSalario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/ModificarSalarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/ModificarSalarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/OlvidaContraseña.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/OlvidaContraseña.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/PrimaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Registro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Registro.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/RegistroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/RegistroController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/SecondaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/interfaces/IDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/model/Movimientos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/model/Movimientos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/model/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/modelDAO/Gasto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/modelDAO/Gasto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/modelDAO/Ingreso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/modelDAO/Ingreso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/modelDAO/MovimientoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/modelDAO/MovimientoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/modelDAO/UsuarioDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Rafa/GestorFinanciero/modelDAO/UsuarioDao.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +74,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -40,6 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1652007670945</updated>
       <workItem from="1652007672311" duration="32000" />
+      <workItem from="1652776062907" duration="806000" />
+      <workItem from="1652776897873" duration="163000" />
     </task>
     <servers />
   </component>

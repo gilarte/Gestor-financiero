@@ -45,7 +45,7 @@ public class Connect {
 		try {
 			c=JAXBContext.newInstance(DatosConexion.class);
 			Unmarshaller m = c.createUnmarshaller();
-			DatosConexion newR= (DatosConexion) m.unmarshal (new File(file));
+			DatosConexion newR= (DatosConexion) m.unmarshal (Connect.class.getResource("/com/Rafa/Conexion/archivo.xml"));
 			DatosCon=newR;
 		} catch (Exception e) {
 			System.out.println(e);

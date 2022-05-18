@@ -99,7 +99,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button layoutX="6.0" layoutY="2.0" mnemonicParsing="false" style="-fx-background-color: tr;" text="Cargar datos" textFill="WHITE" underline="true">
+            <Button layoutX="6.0" layoutY="2.0" mnemonicParsing="false" style="-fx-background-color: rgb(40, 42, 43);" text="Cargar datos" textFill="WHITE" underline="true">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
